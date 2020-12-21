@@ -131,7 +131,7 @@ class human {
             v.addKnowledge();
             v.dailyDetections++;
             
-            if (this.target.people.size() < 10) {
+            if (this.target.people.size() < HOSPITAL_PLACES_MAX) {
               // start treatment
               this.job = "HOSPITAL";
               this.nextJob = daysToTicks(3);

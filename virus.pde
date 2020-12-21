@@ -7,7 +7,7 @@ class virus implements simulationtask {
   int VIRUS_DETECT_PROBABILITY = 25;
   int VIRUS_DEATH_CHANCE = 5;
   int VIRUS_ACTIVE_DAYS = 14;
-  int VIRUS_IMMUNITY_DAYS = 21;
+  int VIRUS_IMMUNITY_DAYS = 30;
   
   int spreadStart = rand(300, 700);
   

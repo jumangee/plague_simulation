@@ -11,6 +11,7 @@ int MAX_PEOPLE_IN_ROOM = 4;
 int TICKS_PER_HOUR = 40;
 int HOURS_PER_DAY = 12;
 
+int HOSPITAL_PLACES_MAX = 25;
 
 //////
 

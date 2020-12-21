@@ -21,15 +21,15 @@ class production implements simulationtask {
     int population = sim.getPopulation().count;
     
     float ratio = (float)this.economics / population;
-    economicsTotal += ratio > 1 ? 1 : (ratio < 0.1 ? -1 : 0);
+    economicsTotal += ratio > 1.5 ? 1 : (ratio < 0.2 ? -1 : 0);
     rec.set("ECONOMICS", economicsTotal);
     
     ratio = (float)this.happiness / population;
-    happinessTotal += ratio > 1 ? 1 : (ratio < 0.1 ? -1 : 0);
+    happinessTotal += ratio > 1.5 ? 1 : (ratio < 0.2 ? -1 : 0);
     rec.set("HAPPINESS", happinessTotal);
     
     ratio = (float)this.sociality / population;
-    socialityTotal += ratio > 1 ? 1 : (ratio < 0.1 ? -1 : 0);
+    socialityTotal += ratio > 1.5 ? 1 : (ratio < 0.2 ? -1 : 0);
     rec.set("SOCIALITY", socialityTotal);
     
     economics = 0;
@@ -40,12 +40,12 @@ class production implements simulationtask {
   void update() {
     int population = sim.getPopulation().count;
     
-    this.economics -= population * .61;
-    this.economics -= sim.buildings.length * .61;
+    this.economics -= population * .62;
+    this.economics -= sim.buildings.length * .62;
     
-    this.happiness -= population * .39;
+    this.happiness -= population * .4;
     
-    this.sociality -= population * .43;
+    this.sociality -= population * .44;
   }
   
   void job(human src) {
